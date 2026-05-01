@@ -41,7 +41,7 @@ struct SearchFeature {
 
                 state.searchState = .loading
                 return .run { [apiClient, clock] send in
-                    try await clock.sleep(for: .milliseconds(300))
+                    try await clock.sleep(for: .milliseconds(400))
                     let users = try await apiClient.searchUsers(trimmedQuery)
                     await send(.searchResponse(.success(users)))
                 } catch: { error, send in

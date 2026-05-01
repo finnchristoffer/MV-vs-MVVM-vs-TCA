@@ -22,6 +22,9 @@ packages:
   Clocks:
     url: https://github.com/pointfreeco/swift-clocks
     from: 1.0.4
+  Perception:
+    url: https://github.com/pointfreeco/swift-perception
+    from: 2.0.10
   SwiftSyntax:
     url: https://github.com/swiftlang/swift-syntax
     exactVersion: 603.0.1
@@ -71,6 +74,8 @@ targets:
       - package: CasePaths
         product: CasePathsCore
       - package: Clocks
+      - package: Perception
+        product: PerceptionCore
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.finnchristoffer.tcaios.tca
@@ -114,6 +119,8 @@ targets:
       - package: CasePaths
         product: CasePathsCore
       - package: Clocks
+      - package: Perception
+        product: PerceptionCore
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
@@ -127,6 +134,7 @@ schemes:
       config: Debug
     test:
       config: Debug
+      gatherCoverageData: true
       targets:
         - MVVMTests
   MVApp:
@@ -138,6 +146,7 @@ schemes:
       config: Debug
     test:
       config: Debug
+      gatherCoverageData: true
       targets:
         - MVTests
   TCAApp:
@@ -149,5 +158,6 @@ schemes:
       config: Debug
     test:
       config: Debug
+      gatherCoverageData: true
       targets:
         - TCATests

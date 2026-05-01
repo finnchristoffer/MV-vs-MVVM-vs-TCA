@@ -28,6 +28,7 @@
 		32B385F210527D360AE829FF /* XCTestCase+Eventually.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD312213EDCA360917F73C32 /* XCTestCase+Eventually.swift */; };
 		3427E9BE2A7D3BAC938DC5B9 /* SearchDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8441FC5AF2C23243467595 /* SearchDelay.swift */; };
 		35254C1575F149314A25CA4C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80455215D8E6D39B956132D6 /* SearchView.swift */; };
+		368E1685A8E49B0EDFFC9EC5 /* PerceptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3E86C303711D135D7B6EA9CC /* PerceptionCore */; };
 		3706D933780EFCD83062003B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9730C32375C47A7B391C433 /* SearchResult.swift */; };
 		3F210EBC2C6037ECF11AF34B /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE10A32CB1E1E38EA2A3DA5 /* MainApp.swift */; };
 		3F3D31ADFA2103C0F94C4908 /* PreviewFavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A98059DDF59DFAAB3F9D20 /* PreviewFavoritesStore.swift */; };
@@ -42,6 +43,7 @@
 		4B2E6231CE0C2B335048417A /* SearchViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7F1418246707A53A7F4076 /* SearchViewState.swift */; };
 		4D222C802FFF7DBED7CB102C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404A39799CB40EB2390F4C4 /* APIError.swift */; };
 		4D5045BF8D5F33D0B4889D1A /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20F67EA7F919168AA388F96 /* MockAPIClient.swift */; };
+		4E121D308CA96E528AA33DD4 /* PerceptionCore in Frameworks */ = {isa = PBXBuildFile; productRef = E01009F12D92092D1028D1B2 /* PerceptionCore */; };
 		5036F92E24B7F84883C02FF2 /* JSONDecoder+GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39682A4C926F570CBC6F82D /* JSONDecoder+GitHub.swift */; };
 		51B801FB748FE64D1B1F3D99 /* DetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5C2E57152B5C52EBE0051 /* DetailViewState.swift */; };
 		51E95C169ECF7C21975526F3 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13817032FAD472F20033EF05 /* UserRow.swift */; };
@@ -258,6 +260,7 @@
 				CF0B66F0B6D6696617E0C9A1 /* Dependencies in Frameworks */,
 				E0103267BB85626F75458C8F /* CasePathsCore in Frameworks */,
 				19CE526CB8418B0F9C6E7758 /* Clocks in Frameworks */,
+				368E1685A8E49B0EDFFC9EC5 /* PerceptionCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +272,7 @@
 				05418ED349AB7E936835B101 /* Dependencies in Frameworks */,
 				4085D8EF9211E87AF9F4408C /* CasePathsCore in Frameworks */,
 				B5E3D98EA1F2C5074CAC62A5 /* Clocks in Frameworks */,
+				4E121D308CA96E528AA33DD4 /* PerceptionCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +606,7 @@
 				071B4BC72525DAABD4BE072F /* Dependencies */,
 				3487C68F3608F7D0412C4876 /* CasePathsCore */,
 				68CD0E3BBFAA8D7AD3C08969 /* Clocks */,
+				3E86C303711D135D7B6EA9CC /* PerceptionCore */,
 			);
 			productName = TCATests;
 			productReference = A8AEA452B64FCE3E7BEC2DAB /* TCATests.xctest */;
@@ -686,6 +691,7 @@
 				8A5290A9EFFEAB8CB29075E6 /* Dependencies */,
 				8D0CF4B10DEA3A8BAAD42550 /* CasePathsCore */,
 				0790F622562DBD15B40FC338 /* Clocks */,
+				E01009F12D92092D1028D1B2 /* PerceptionCore */,
 			);
 			productName = TCAApp;
 			productReference = 60F63453E2D5C46C407D4AF2 /* TCAApp.app */;
@@ -716,6 +722,7 @@
 				62CC03CD4A68EB3DABCF7D4C /* XCRemoteSwiftPackageReference "swift-clocks" */,
 				F05DEC085A8B6B0BEBFE2045 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				41498B28C67953052EA659B4 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				FF12D7DA466BA53F003558C4 /* XCRemoteSwiftPackageReference "swift-perception" */,
 				BDD1BD595A3A786D29AC00D2 /* XCRemoteSwiftPackageReference "swift-syntax" */,
 			);
 			projectDirPath = "";
@@ -1376,6 +1383,14 @@
 				minimumVersion = 1.15.0;
 			};
 		};
+		FF12D7DA466BA53F003558C4 /* XCRemoteSwiftPackageReference "swift-perception" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-perception";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.10;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1393,6 +1408,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 593D3733C36D352117D4CFF6 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
 			productName = CasePathsCore;
+		};
+		3E86C303711D135D7B6EA9CC /* PerceptionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF12D7DA466BA53F003558C4 /* XCRemoteSwiftPackageReference "swift-perception" */;
+			productName = PerceptionCore;
 		};
 		5EA0FE2A13C2462CAB9A0FBF /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1418,6 +1438,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F05DEC085A8B6B0BEBFE2045 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		E01009F12D92092D1028D1B2 /* PerceptionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF12D7DA466BA53F003558C4 /* XCRemoteSwiftPackageReference "swift-perception" */;
+			productName = PerceptionCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

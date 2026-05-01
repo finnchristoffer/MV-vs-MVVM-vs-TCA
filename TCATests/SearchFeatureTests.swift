@@ -21,7 +21,7 @@ final class SearchFeatureTests: XCTestCase {
             $0.query = "octocat"
             $0.searchState = .loading
         }
-        await clock.advance(by: .milliseconds(300))
+        await clock.advance(by: .milliseconds(400))
         await store.receive(.searchResponse(.success([TestFixtures.user]))) {
             $0.searchState = .loaded([TestFixtures.user])
         }
@@ -50,7 +50,7 @@ final class SearchFeatureTests: XCTestCase {
         await store.send(.searchQueryChanged("octocat")) {
             $0.query = "octocat"
         }
-        await clock.advance(by: .milliseconds(300))
+        await clock.advance(by: .milliseconds(400))
         await store.receive(.searchResponse(.success([TestFixtures.user]))) {
             $0.searchState = .loaded([TestFixtures.user])
         }
@@ -72,7 +72,7 @@ final class SearchFeatureTests: XCTestCase {
             $0.query = "missing"
             $0.searchState = .loading
         }
-        await clock.advance(by: .milliseconds(300))
+        await clock.advance(by: .milliseconds(400))
         await store.receive(.searchResponse(.success([]))) {
             $0.searchState = .empty
         }
@@ -91,7 +91,7 @@ final class SearchFeatureTests: XCTestCase {
             $0.query = "octocat"
             $0.searchState = .loading
         }
-        await clock.advance(by: .milliseconds(300))
+        await clock.advance(by: .milliseconds(400))
         await store.receive(\.searchResponse) {
             $0.searchState = .error(message: TestError.expected.localizedDescription)
         }
